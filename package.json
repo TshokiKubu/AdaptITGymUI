@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "angular-common": "^0.1.0",
+    "angular-web-storage": "^14.0.0",
+    "angular-webstorage-service": "^1.0.2",
+    "angular7-csv": "^0.2.12",
+    "chart.js": "^4.1.1",
+    "ng2-charts": "^4.1.1",
+    "ngx-webstorage-service": "^5.0.0"
+  }
+}

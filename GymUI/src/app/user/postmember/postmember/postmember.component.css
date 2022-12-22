@@ -1,0 +1,11 @@
+table {
+    width: 50%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 30px;
+    align-self: left;
+  }
+  th.mat-header-cell {
+    text-align: left;
+    max-width: 150px;
+  }

@@ -1,0 +1,8 @@
+<div id="msg" *ngIf="showSuccessMsg" class="alert alert-success">
+    <strong>{{successMsg}}</strong>
+  </div>
+  <ul *ngIf="showFailureMsg" class="alert alert-danger">
+    <li *ngFor="let error of serverErrors">
+      {{error}}
+    </li>
+  </ul>

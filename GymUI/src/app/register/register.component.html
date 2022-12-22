@@ -1,0 +1,47 @@
+<br />
+<app-alert></app-alert>
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-md-2 col-sm-1 col-lg-6">
+      <div class="card border-primary mb-6">
+        <form [formGroup]="userRegistrationForm" (ngSubmit)="register()" novalidate>
+          <div class="card-header text-white bg-primary">
+            Register Here
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <input [ngClass]="(urf['userName'].touched && urf['userName'].invalid)?'form-control is-invalid':((urf['userName'].touched && urf['userName'].valid)?'form-control is-valid':'form-control')" formControlName="userName" placeholder="user name">
+              <div class="invalid-feedback" *ngIf="urf['userName'].touched && urf['userName'].invalid">
+                User Name is required
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <input type="password" [ngClass]="(urf['password'].touched && 
+                  urf['password'].invalid)?'form-control is-invalid':((urf['password'].touched && urf['password'].valid)?
+                  'form-control is-valid':'form-control')" class="form-control" formControlName="password" placeholder="password" />
+              <div class="invalid-feedback" *ngIf="urf['password'].touched && urf['password'].invalid">
+                Password is required
+              </div>
+            </div>
+           
+            <div class="form-group">
+              Select Role :  
+              <select  [ngClass]="(urf['role'].touched && 
+              urf['role'].invalid)?'form-control is-invalid':((urf['role'].touched && urf['role'].valid)?
+              'form-control is-valid':'form-control')" class="form-control" formControlName="role">  
+                      <option *ngFor="let rol of role">{{rol.name}} </option>  
+              </select>
+              <div class="invalid-feedback" *ngIf="urf['role'].touched && urf['role'].invalid">
+                Role is required
+              </div>  
+            </div>
+            <br>
+            <button class="btn btn-primary btn-lg" (click)="register()"  type="submit">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
